@@ -8,12 +8,12 @@ def initial_report(df):
     print(f"- Column Names: {list(df.columns)}\n")
 
     
-    print("📌 Data Types:")
+    print("*** Data Types:")
     for col, dtype in df.dtypes.items():
         print(f"  {col}: {dtype}")
     print()
 
-    print("🧬 Mixed Data Types:")
+    print("*** Mixed Data Types:")
     for col in df.columns:
         try:
             type_counts = df[col].apply(type).value_counts()
